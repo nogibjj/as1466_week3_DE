@@ -38,7 +38,7 @@ string = f'''
 
 ## Overall dataset descriptive statistics
 
-{s.to_markdown()}
+{s.to_pandas().to_markdown()}
 
 ## Here are some data visualizations of data to understand relationships between variables
 
