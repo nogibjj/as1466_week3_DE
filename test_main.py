@@ -1,7 +1,20 @@
-from main import basic_two_calculation
-
+from main import stats, mean, median, std 
+import pandas as pd
+df = pd.read_csv('bmi.csv')
 def test_main():
-    assert basic_two_calculation(1,2) == 3
-    assert basic_two_calculation(10,10) == 20
+    # Calculate statistics once and store them in variables
+    #calculated_stats = stats(df)
+    age_mean = df['Age'].mean()
+    height_median = df['Height'].median()
+    weight_std = df['Weight'].std()
 
-test_main()
+    # Use assertions to compare specific values or properties
+    #assert (stats(df) == stats(df)).all().all()
+    assert (age_mean == mean(df['Age']))
+    assert (height_median == median(df['Height']))
+    assert (weight_std == std(df['Weight']))
+
+
+
+if __name__ == "__main__":
+  test_main()
