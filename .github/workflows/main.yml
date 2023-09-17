@@ -24,6 +24,3 @@ jobs:
       run: make test
     - name: Add_commit_push
       run: make add_commit_push
-    - name: Update Readme
-      run: make update_readme
-
