@@ -15,12 +15,12 @@ def std(series):
   return series.std()
   
 #main script
-import pandas as pd 
+import polars as pl 
 import matplotlib.pyplot as plt
 import seaborn as sns 
 
 #reading csv file
-data = pd.read_csv('bmi.csv')
+data = pl.read_csv('bmi.csv')
 
 #generate summary statistics 
 stats1 = stats(data)
