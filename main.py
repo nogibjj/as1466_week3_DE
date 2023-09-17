@@ -25,10 +25,11 @@ data = pl.read_csv('bmi.csv')
 #generate summary statistics 
 stats1 = stats(data)
 #generate boxplot 
-boxplots = sns.boxplot(data)
+boxplots = sns.boxplot(data[:, :4])
 plt.savefig('boxplots.png')
 #generate pairplot for variables correlations
-pairplot = sns.pairplot(data, hue="BmiClass")
+d = data.to_pandas()
+pairplot = sns.pairplot(d, hue="BmiClass")
 plt.savefig('pairplot.png')
 
 s = stats(data)
