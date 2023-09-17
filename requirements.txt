@@ -12,6 +12,7 @@ boto3
 jupyter
 pandas
 polars
+pyarrow
 numpy
 scikit-learn
 matplotlib
